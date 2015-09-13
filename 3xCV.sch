@@ -10011,6 +10011,77 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="lb_devs">
+<description>My Custom Devices</description>
+<packages>
+<package name="TL2285_PCB">
+<description>E-Switch TL2285 PCB switches</description>
+<pad name="6" x="2.5" y="3" drill="0.8"/>
+<pad name="5" x="0" y="3" drill="0.8"/>
+<pad name="4" x="-2.5" y="3" drill="0.8"/>
+<pad name="2" x="0" y="-3" drill="0.8"/>
+<pad name="1" x="-2.5" y="-3" drill="0.8"/>
+<pad name="3" x="2.5" y="-3" drill="0.8"/>
+<wire x1="-4" y1="4" x2="-4" y2="-4" width="0.127" layer="21"/>
+<wire x1="-4" y1="-4" x2="4" y2="-4" width="0.127" layer="21"/>
+<wire x1="4" y1="-4" x2="4" y2="4" width="0.127" layer="21"/>
+<wire x1="4" y1="4" x2="-4" y2="4" width="0.127" layer="21"/>
+<text x="-2.23" y="-0.5" size="0.8128" layer="21">&gt;VALUE</text>
+<text x="-2.23" y="0.77" size="0.8128" layer="21">&gt;NAME</text>
+</package>
+</packages>
+<symbols>
+<symbol name="TS2285">
+<wire x1="-7.62" y1="5.08" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="2.54" y2="6.35" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="2.54" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-3.81" width="0.254" layer="94"/>
+<pin name="P3" x="-7.62" y="5.08" visible="pad" length="middle"/>
+<pin name="P4" x="-7.62" y="-5.08" visible="pad" length="middle"/>
+<pin name="P1" x="7.62" y="7.62" visible="pad" length="middle" rot="R180"/>
+<pin name="P2" x="7.62" y="2.54" visible="pad" length="middle" rot="R180"/>
+<pin name="P6" x="7.62" y="-2.54" visible="pad" length="middle" rot="R180"/>
+<pin name="P5" x="7.62" y="-7.62" visible="pad" length="middle" rot="R180"/>
+<text x="-7.62" y="7.62" size="1.27" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-7.62" size="1.27" layer="96">&gt;VALUE</text>
+<wire x1="2.54" y1="11.43" x2="-2.54" y2="11.43" width="0.254" layer="94"/>
+<wire x1="0" y1="10.16" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="8.89" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="1.27" y2="8.89" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TL2285" prefix="SW">
+<description>E-Switch TL2285 (PCB switch)</description>
+<gates>
+<gate name="G$1" symbol="TS2285" x="10.16" y="0"/>
+</gates>
+<devices>
+<device name="" package="TL2285_PCB">
+<connects>
+<connect gate="G$1" pin="P1" pad="1"/>
+<connect gate="G$1" pin="P2" pad="2"/>
+<connect gate="G$1" pin="P3" pad="3"/>
+<connect gate="G$1" pin="P4" pad="4"/>
+<connect gate="G$1" pin="P5" pad="5"/>
+<connect gate="G$1" pin="P6" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -10144,6 +10215,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="R49" library="rcl" deviceset="R-US_" device="R0603" value="100k"/>
 <part name="R50" library="rcl" deviceset="R-US_" device="R0603" value="100k"/>
 <part name="R51" library="rcl" deviceset="R-US_" device="R0603" value="100k"/>
+<part name="SW1" library="lb_devs" deviceset="TL2285" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10286,6 +10358,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="R49" gate="G$1" x="187.96" y="213.36" rot="R180"/>
 <instance part="R50" gate="G$1" x="187.96" y="134.62" rot="R180"/>
 <instance part="R51" gate="G$1" x="187.96" y="55.88" rot="R180"/>
+<instance part="SW1" gate="G$1" x="287.02" y="177.8"/>
 </instances>
 <busses>
 </busses>
@@ -10924,6 +10997,14 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="152.4" y1="116.84" x2="157.48" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="116.84" x2="157.48" y2="139.7" width="0.1524" layer="91"/>
 <junction x="157.48" y="139.7"/>
+<wire x1="157.48" y1="160.02" x2="167.64" y2="160.02" width="0.1524" layer="91"/>
+<junction x="157.48" y="160.02"/>
+<label x="167.64" y="160.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="G$1" pin="P2"/>
+<wire x1="294.64" y1="180.34" x2="304.8" y2="180.34" width="0.1524" layer="91"/>
+<label x="304.8" y="180.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -11093,6 +11174,14 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <wire x1="152.4" y1="195.58" x2="157.48" y2="195.58" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="195.58" x2="157.48" y2="218.44" width="0.1524" layer="91"/>
 <junction x="157.48" y="218.44"/>
+<wire x1="157.48" y1="238.76" x2="167.64" y2="238.76" width="0.1524" layer="91"/>
+<junction x="157.48" y="238.76"/>
+<label x="167.64" y="238.76" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="SW1" gate="G$1" pin="P3"/>
+<wire x1="279.4" y1="182.88" x2="269.24" y2="182.88" width="0.1524" layer="91"/>
+<label x="269.24" y="182.88" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="N$47" class="0">
