@@ -47,8 +47,8 @@
      inkscape:snap-midpoints="false"
      inkscape:window-width="2248"
      inkscape:window-height="1309"
-     inkscape:window-x="178"
-     inkscape:window-y="34"
+     inkscape:window-x="188"
+     inkscape:window-y="24"
      inkscape:window-maximized="0"
      inkscape:snap-nodes="true"
      inkscape:snap-bbox="false"
@@ -176,8 +176,8 @@
     <circle
        style="display:inline;fill:none;stroke:#0000ff;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="ellipse5442"
-       cx="722.25"
-       cy="651.86218"
+       cx="423"
+       cy="584.36218"
        r="10.418927" />
     <ellipse
        style="display:inline;fill:none;stroke:#0000ff;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1522,6 +1522,22 @@
        id="path4801"
        d="m 333,651.86218 27,0 9,-9 22.5,0"
        style="fill:#ff0000;fill-opacity:0.02443716;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.35433072;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:'My Underwood';-inkscape-font-specification:'My Underwood';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="408.94089"
+       y="571.55725"
+       id="text4803"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4805"
+         x="408.94089"
+         y="571.55725">thru</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.35433071;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 436.5,584.36218 22.5,0 4.5,4.5"
+       id="path4807"
+       inkscape:connector-curvature="0" />
   </g>
   <g
      inkscape:groupmode="layer"

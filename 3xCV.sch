@@ -10216,10 +10216,12 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="R50" library="rcl" deviceset="R-US_" device="R0603" value="100k"/>
 <part name="R51" library="rcl" deviceset="R-US_" device="R0603" value="100k"/>
 <part name="SW1" library="lb_devs" deviceset="TL2285" device=""/>
+<part name="SW2" library="lb_devs" deviceset="TL2285" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="266.7" y="190.5" size="1.778" layer="91">Switch connects CV mix of unit 1 and 2.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -10350,7 +10352,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="R46" gate="G$1" x="236.22" y="152.4"/>
 <instance part="GND26" gate="1" x="246.38" y="134.62"/>
 <instance part="OUT4" gate="G$1" x="256.54" y="223.52"/>
-<instance part="R47" gate="G$1" x="236.22" y="231.14"/>
+<instance part="R47" gate="G$1" x="236.22" y="238.76"/>
 <instance part="GND27" gate="1" x="246.38" y="213.36"/>
 <instance part="OUT5" gate="G$1" x="256.54" y="66.04"/>
 <instance part="GND28" gate="1" x="246.38" y="55.88"/>
@@ -10359,6 +10361,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="R50" gate="G$1" x="187.96" y="134.62" rot="R180"/>
 <instance part="R51" gate="G$1" x="187.96" y="55.88" rot="R180"/>
 <instance part="SW1" gate="G$1" x="287.02" y="177.8"/>
+<instance part="SW2" gate="G$1" x="215.9" y="243.84" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -11126,6 +11129,12 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="R31" gate="G$1" pin="E"/>
 <wire x1="109.22" y1="226.06" x2="109.22" y2="236.22" width="0.1524" layer="91"/>
 <junction x="101.6" y="236.22"/>
+<pinref part="SW2" gate="G$1" pin="P5"/>
+<wire x1="208.28" y1="236.22" x2="200.66" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="236.22" x2="200.66" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="246.38" x2="109.22" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="246.38" x2="109.22" y2="236.22" width="0.1524" layer="91"/>
+<junction x="109.22" y="236.22"/>
 </segment>
 </net>
 <net name="N$43" class="0">
@@ -11195,12 +11204,12 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <junction x="195.58" y="226.06"/>
 <pinref part="IC3" gate="C" pin="+IN"/>
 <wire x1="195.58" y1="203.2" x2="200.66" y2="203.2" width="0.1524" layer="91"/>
-<pinref part="R47" gate="G$1" pin="1"/>
-<wire x1="231.14" y1="231.14" x2="195.58" y2="231.14" width="0.1524" layer="91"/>
-<wire x1="195.58" y1="231.14" x2="195.58" y2="226.06" width="0.1524" layer="91"/>
 <pinref part="R49" gate="G$1" pin="1"/>
 <wire x1="193.04" y1="213.36" x2="195.58" y2="213.36" width="0.1524" layer="91"/>
 <junction x="195.58" y="213.36"/>
+<pinref part="SW2" gate="G$1" pin="P6"/>
+<wire x1="208.28" y1="241.3" x2="195.58" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="195.58" y1="241.3" x2="195.58" y2="226.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$48" class="0">
@@ -11286,8 +11295,8 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <net name="N$21" class="0">
 <segment>
 <pinref part="R47" gate="G$1" pin="2"/>
-<wire x1="241.3" y1="231.14" x2="246.38" y2="231.14" width="0.1524" layer="91"/>
-<wire x1="246.38" y1="231.14" x2="246.38" y2="226.06" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="238.76" x2="246.38" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="238.76" x2="246.38" y2="226.06" width="0.1524" layer="91"/>
 <pinref part="OUT4" gate="G$1" pin="2"/>
 <wire x1="246.38" y1="226.06" x2="251.46" y2="226.06" width="0.1524" layer="91"/>
 </segment>
@@ -11340,6 +11349,13 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="R39" gate="G$1" pin="1"/>
 <pinref part="R49" gate="G$1" pin="2"/>
 <wire x1="180.34" y1="213.36" x2="182.88" y2="213.36" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="SW2" gate="G$1" pin="P4"/>
+<pinref part="R47" gate="G$1" pin="1"/>
+<wire x1="223.52" y1="238.76" x2="231.14" y2="238.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
